@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using OpenTK;
 using OpenTK.Graphics.OpenGL;
+using Voxel.Engine;
 using Voxel.Engine.Debug;
 
 namespace MosCraft.Client
@@ -12,11 +13,13 @@ namespace MosCraft.Client
     class Client : GameWindow
     {
         private FpsComponent _fps;
+        private Viewport _view;
 
         public Client()
             : base(1280, 720)
         {
             _fps = new FpsComponent();
+            _view = new Viewport(Width, Height);
         }
 
         protected override void OnLoad(EventArgs e)
@@ -27,7 +30,7 @@ namespace MosCraft.Client
 
         protected override void OnResize(EventArgs e)
         {
-            GL.Viewport(0, 0, Width, Height);
+            _view.SetSize(Width, Height);
         }
 
         protected override void OnUpdateFrame(FrameEventArgs e)

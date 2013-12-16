@@ -129,7 +129,7 @@ namespace Voxel.Engine.Rendering
             }
             else
             {
-                GL.TexImage2D(TextureType, 0, PixelInternalFormat.Rgba, imageMipMapped[0].Width, imageMipMapped[0].Height, 0, pixelFormat, PixelType.UnsignedByte, imageMipMapped[0]);
+                //GL.TexImage2D(TextureType, 0, PixelInternalFormat.Rgba, imageMipMapped[0].Width, imageMipMapped[0].Height, 0, pixelFormat, PixelType.UnsignedByte, imageMipMapped[0]);
                 GL.TexParameter(TextureType, TextureParameterName.TextureMinFilter, (int)All.Nearest);
                 GL.TexParameter(TextureType, TextureParameterName.TextureMagFilter, (int)All.Nearest);
             }

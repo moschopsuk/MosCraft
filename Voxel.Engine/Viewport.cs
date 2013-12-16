@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OpenTK.Graphics.OpenGL;
 
 namespace Voxel.Engine
 {
@@ -24,6 +25,8 @@ namespace Voxel.Engine
             Width = width;
             Height = height;
             AspectRatio = Width / (float)Height;
+
+            GL.Viewport(0, 0, Width, Height);
         }
 
         public float AspectRatio { get; private set; }
