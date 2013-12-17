@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cameras\Camera.cs" />
+    <Compile Include="Cameras\FirstPersonCamera.cs" />
     <Compile Include="Debug\FPSComponent.cs" />
     <Compile Include="GameComponent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

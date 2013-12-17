@@ -6,6 +6,7 @@ using System.Text;
 using OpenTK;
 using OpenTK.Graphics.OpenGL;
 using Voxel.Engine;
+using Voxel.Engine.Cameras;
 using Voxel.Engine.Debug;
 
 namespace MosCraft.Client
@@ -14,12 +15,14 @@ namespace MosCraft.Client
     {
         private FpsComponent _fps;
         private Viewport _view;
+        private FirstPersonCamera _camera;
 
         public Client()
             : base(1280, 720)
         {
             _fps = new FpsComponent();
             _view = new Viewport(Width, Height);
+            _camera = new FirstPersonCamera(_view);
         }
 
         protected override void OnLoad(EventArgs e)
