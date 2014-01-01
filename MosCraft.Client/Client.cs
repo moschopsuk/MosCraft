@@ -8,6 +8,7 @@ using OpenTK.Graphics.OpenGL;
 using Voxel.Engine;
 using Voxel.Engine.Cameras;
 using Voxel.Engine.Debug;
+using Voxel.Engine.Rendering;
 
 namespace MosCraft.Client
 {
@@ -15,7 +16,16 @@ namespace MosCraft.Client
     {
         private FpsComponent _fps;
         private Viewport _view;
-        private FirstPersonCamera _camera;
+        private Camera _camera;
+
+        #region Properties
+
+        public Camera Camera
+        {
+            get { return _camera; }
+        }
+
+        #endregion
 
         public Client()
             : base(1280, 720)
@@ -23,6 +33,11 @@ namespace MosCraft.Client
             _fps = new FpsComponent();
             _view = new Viewport(Width, Height);
             _camera = new FirstPersonCamera(_view);
+
+            Console.WriteLine(Capabilities.VideoVendor);
+            Console.WriteLine(Capabilities.VideoRenderer);
+            Console.WriteLine(Capabilities.VideoVersion);
+            Console.WriteLine("OpenGL:" + Capabilities.MajorVersion + "." + Capabilities.MinorVersion);
         }
 
         protected override void OnLoad(EventArgs e)
