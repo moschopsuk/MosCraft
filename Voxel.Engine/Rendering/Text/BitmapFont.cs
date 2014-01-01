@@ -3,7 +3,6 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Text;
 using OpenTK;
-using Voxel.Engine.Rendering.Fonts;
 using PixelFormat = System.Drawing.Imaging.PixelFormat;
 
 namespace Voxel.Engine.Rendering.Text
