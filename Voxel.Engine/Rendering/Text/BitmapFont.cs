@@ -7,7 +7,7 @@ using PixelFormat = System.Drawing.Imaging.PixelFormat;
 
 namespace Voxel.Engine.Rendering.Text
 {
-    class BitmapFont
+    public class BitmapFont
     {
         private Texture2D _texture;
         private readonly List<Glyph> _glyphs;
@@ -16,7 +16,7 @@ namespace Voxel.Engine.Rendering.Text
         public BitmapFont(string fileName, int size)
         {       
             _glyphs = new List<Glyph>();
-            _font = new Font(LoadFont(fileName), size);
+            _font = new Font(LoadFont(fileName), size, GraphicsUnit.Pixel);
 
             GenerateSheet();
         }
@@ -28,8 +28,8 @@ namespace Voxel.Engine.Rendering.Text
 
         private FontFamily LoadFont(string fileName)
         {
-            var fonts = new PrivateFontCollection();//here is where we assing memory space to myFonts
-            fonts.AddFontFile(fileName);//we add the full path of the ttf file
+            var fonts = new PrivateFontCollection();
+            fonts.AddFontFile(fileName);
             return fonts.Families[0];
         }
 
@@ -43,7 +43,6 @@ namespace Voxel.Engine.Rendering.Text
 
             using (var g = Graphics.FromImage(bmp))
             {
-                g.SmoothingMode = SmoothingMode.AntiAlias;
 			    g.InterpolationMode = InterpolationMode.HighQualityBilinear;
 			    g.TextRenderingHint = TextRenderingHint.AntiAliasGridFit;
                 g.Clear(Color.Transparent);

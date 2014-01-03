@@ -9,6 +9,7 @@ using Voxel.Engine;
 using Voxel.Engine.Cameras;
 using Voxel.Engine.Debug;
 using Voxel.Engine.Rendering;
+using Voxel.Engine.Rendering.Text;
 
 namespace MosCraft.Client
 {
@@ -38,6 +39,8 @@ namespace MosCraft.Client
             Console.WriteLine(Capabilities.VideoRenderer);
             Console.WriteLine(Capabilities.VideoVersion);
             Console.WriteLine("OpenGL:" + Capabilities.MajorVersion + "." + Capabilities.MinorVersion);
+
+            //BitmapFont b = new BitmapFont(@"./../../../Res/8bitoperator.ttf", 13);
         }
 
         protected override void OnLoad(EventArgs e)

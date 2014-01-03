@@ -30,12 +30,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BulletSharp">
+      <HintPath>..\Libs\BulletSharp.dll</HintPath>
+    </Reference>
     <Reference Include="OpenTK">
       <HintPath>..\..\..\GitHub\MosCraft\Libs\OpenTK.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,13 +52,24 @@
     <Compile Include="Cameras\FirstPersonCamera.cs" />
     <Compile Include="Debug\FPSComponent.cs" />
     <Compile Include="GameComponent.cs" />
+    <Compile Include="Rendering\Capabilities.cs" />
+    <Compile Include="Rendering\Models\Model.cs" />
+    <Compile Include="Rendering\Models\ModelImporter.cs" />
+    <Compile Include="Rendering\SpriteBatch.cs" />
+    <Compile Include="Rendering\Text\BitmapFont.cs" />
+    <Compile Include="Rendering\Text\Glyph.cs" />
+    <Compile Include="Utils\ContainmentType.cs" />
+    <Compile Include="Utils\Frustum.cs" />
+    <Compile Include="Utils\Plane.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rendering\Texture.cs" />
     <Compile Include="Rendering\Texture2D.cs" />
     <Compile Include="Viewport.cs" />
     <Compile Include="Viewstrum.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Rendering\Buffers\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
