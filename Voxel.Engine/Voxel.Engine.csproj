@@ -53,6 +53,7 @@
     <Compile Include="Debug\FPSComponent.cs" />
     <Compile Include="GameComponent.cs" />
     <Compile Include="Rendering\Capabilities.cs" />
+    <Compile Include="Rendering\Models\Face.cs" />
     <Compile Include="Rendering\Models\Model.cs" />
     <Compile Include="Rendering\Models\ModelImporter.cs" />
     <Compile Include="Rendering\SpriteBatch.cs" />
