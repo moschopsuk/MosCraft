@@ -50,7 +50,7 @@
   <ItemGroup>
     <Compile Include="Cameras\Camera.cs" />
     <Compile Include="Cameras\FirstPersonCamera.cs" />
-    <Compile Include="Debug\FpsDebugComponent.cs" />
+    <Compile Include="DebugTools\FpsComponent.cs" />
     <Compile Include="GameComponent.cs" />
     <Compile Include="Rendering\Capabilities.cs" />
     <Compile Include="Rendering\Models\Face.cs" />

@@ -7,7 +7,7 @@ using OpenTK;
 using OpenTK.Graphics.OpenGL;
 using Voxel.Engine;
 using Voxel.Engine.Cameras;
-using Voxel.Engine.Debug;
+using Voxel.Engine.DebugTools;
 using Voxel.Engine.Rendering;
 using Voxel.Engine.Rendering.Text;
 
