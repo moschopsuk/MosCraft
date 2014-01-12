@@ -34,7 +34,7 @@
       <HintPath>..\Libs\BulletSharp.dll</HintPath>
     </Reference>
     <Reference Include="OpenTK">
-      <HintPath>..\..\..\GitHub\MosCraft\Libs\OpenTK.dll</HintPath>
+      <HintPath>..\Libs\OpenTK.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
