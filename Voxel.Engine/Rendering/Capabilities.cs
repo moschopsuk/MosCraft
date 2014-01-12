@@ -69,7 +69,8 @@ namespace Voxel.Engine.Rendering
                 
                 for (int id = 0; id < count; id++)
                 {
-                    yield return GL.GetString(StringName.Extensions, id);
+
+                    yield return GL.GetString(StringNameIndexed.Extensions, id);
                 }
             }
         }
